@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+/* FONT 
+font-family: 'Architects Daughter', cursive;
+font-family: 'Fredericka the Great', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredericka+the+Great&display=swap');
+
+/* RESET */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #999;
+    justify-content: space-between;
+    padding: 5vh 5vw;
+    align-items: center;
+    z-index: 999;
+}
+
+header #snb {
+    display: none;
+}
+
+/* LOGO */
+header h1 a {
+    font: bold 24px/1 "Architects Daughter";
+    color: #333
+}
+
+/* GNB */
+header #gnb {
+    display: flex;
+}
+
+header #gnb li {
+    margin: 0px 20px;
+}
+
+header #gnb li a {
+    font: 16px/1 "Architects Daughter";
+    letter-spacing: 1px;
+    color: #333
+}
+
+/* SNS */
+.sns {
+    display: flex;
+}
+
+.sns li {
+    margin: 0px 10px;
+}
+
+.sns li a {
+    font-size: 16px;
+    color: #333;
+}
+
+/* FIGURE */
+figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+figure video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+figure .text {
+    position: absolute;
+    left: 6vw;
+    top: 40%;
+    transform: translate(0, -50%);
+}
+
+figure .text p {
+    font: normal 8vw/9vw "Fredericka the Great";
+    color: #333
+}
+
+figure .text ul {
+    display: flex;
+    margin-top: 30px;
+}
+
+figure .text ul li {
+    margin: 0px 30px;
+}
+
+figure .text ul li i {
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px;
+}
+
+figure .text ul li strong {
+    font: 14px/1 "Architects Daughter";
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font: 12px/1 "arial";
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 5vh 5vw;
+    z-index: 2;
+}
+
+/* 반응형 MOBILE*/
+@media screen and (max-width: 720px) {
+    header #gnb {
+        display: none;
+    }
+
+    header .sns {
+        display: none;
+    }
+
+    header #snb {
+        display: block;
+    }
+
+    header #snb .btn_menu {
+        color: #333;
+    }
+
+    header #snb .sub_menu {
+        position: absolute;
+        right: 5vw;
+        padding: 10px 25px;
+        background-color: rgb(150, 219, 246);
+        border: 1px solid #333;
+        border-radius: 10px;
+        text-align: right;
+        opacity: 1;
+        transition: 0.4s;
+    }
+
+    header #snb .sub_menu.hide {
+        opacity: 0;
+    }
+
+    header #snb .sub_menu li {
+        padding: 10px 0px;
+        font: 16px/1 "Architects Daughter";
+    }
+
+    header #snb .sub_menu li a {
+        color: #333;
+    }
+
+    header #snb .sub_menu li a i {
+        margin-left: 8px;
+    }
+    
+    figure .text p {
+        font-size: 10vw;
+    }
+}
